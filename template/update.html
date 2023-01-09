@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% extends 'base.html' %}
+{% block content %}
+<body>
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      UPDATING....
+      <div class="card-body">
+        <form method="POST">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+{% endblock %}
+</html>

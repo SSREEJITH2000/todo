@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% extends 'base.html' %}
+{% block content %}
+<body>
+
+            <div class="shadow card">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{tk.names}}</h5>
+                    <p><b>{{tk.priorities}}</b></p>
+                    <p>{{tk.dates}}</p>
+                    <a class="btn btn-danger" href="{% url 'delete' tk.id %}">Done</a>
+                    <a class="btn btn-success" href="{% url 'update' tk.id %}">Update</a>
+                </div>
+
+            </div>
+
+</body>
+{% endblock %}
+</html>

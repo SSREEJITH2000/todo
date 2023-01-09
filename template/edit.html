@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+  {{up.as_p}}
+  <button type="submit">Confirm</button>
+</form>
+{% endblock %}
+</body>
+</html>
